@@ -1,4 +1,4 @@
-const inquirer = require(inquirer);
+const inquirer = require("inquirer");
 
 module.exports = class Inquirer {
     constructor(name, message, choices) {

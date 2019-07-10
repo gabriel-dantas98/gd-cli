@@ -1,4 +1,4 @@
-const Command = require('../core/command');
+const Command = require('../core/command/prompt');
 
 class GcpCommands extends Command {
 
