@@ -39,7 +39,6 @@ const initInquirerCommands = async (commands) => {
 const initTool = async (commandsPrompt, commandsInquirer ) => {
     let promptCommands = await initPromptCommands(commandsPrompt);
     let inquirerCommands = await initInquirerCommands(commandsInquirer);
-    console.log(inquirerCommands);
 }
 
 // Self invoke function to start process the import all and init cli interface
