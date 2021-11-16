@@ -5,7 +5,7 @@
   "main": "async.js",
   "dependencies": {
     "@google-cloud/compute": "^1.1.1",
-    "aws-sdk": "^2.488.0",
+    "aws-sdk": "^2.814.0",
     "commander": "^2.20.0",
     "inquirer": "^6.4.1",
     "lodash": "^4.17.11"
