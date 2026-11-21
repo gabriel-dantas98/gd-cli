@@ -3,9 +3,6 @@ const commander = require("commander");
 const path = require("path");
 const fs = require("fs");
 
-const promptCommand = require("./core/command/prompt");
-const inquirerCommand = require("./core/command/inquirer");
-
 // Full path name commands dir 
 const commandsDir = path.join(__dirname, 'commands');
 
@@ -37,8 +34,8 @@ const initInquirerCommands = async (commands) => {
 };
 
 const initTool = async (commandsPrompt, commandsInquirer ) => {
-    let promptCommands = await initPromptCommands(commandsPrompt);
-    let inquirerCommands = await initInquirerCommands(commandsInquirer);
+    await initPromptCommands(commandsPrompt);
+    await initInquirerCommands(commandsInquirer);
 }
 
 // Self invoke function to start process the import all and init cli interface
@@ -49,11 +46,6 @@ const initTool = async (commandsPrompt, commandsInquirer ) => {
         
         var requiredCommands = files.map(requireCommand); 
         var commandsInquirerAttr = requiredCommands.map((command) => { return command.getInquirerAttr();})
-    
-        // *** TEST IMPORT's ***
-        // requiredCommands.forEach(element => {
-        //     console.log(`${element.constructor.name} is imported!`);
-        // });
 
         initTool(requiredCommands, commandsInquirerAttr);
     });
