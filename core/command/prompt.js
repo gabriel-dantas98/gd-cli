@@ -1,5 +1,3 @@
-const commander = require('commander');
-
 module.exports = class Command {
     constructor(param_name, alias, type, description, action, choices, default_value) {
         this.param_name = param_name;
