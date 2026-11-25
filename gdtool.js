@@ -3,9 +3,6 @@ const commander = require("commander");
 const path = require("path");
 const fs = require("fs");
 
-const promptCommand = require("./core/command/prompt");
-const inquirerCommand = require("./core/command/inquirer");
-
 // Full path name commands dir 
 const commandsDir = path.join(__dirname, 'commands');
 
